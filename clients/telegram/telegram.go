@@ -1,7 +1,7 @@
 package telegram
 
 import (
-	"fmt"
+	"LinkStrashBot/lib/e"
 	"net/http"
 	"net/url"
 	"path"
@@ -47,6 +47,7 @@ func (c *Client) doRequest(method string, query url.Values) ([]byte, error) {
 	if err != nil {
 		return nil, e.Wrap(errMsg, err)
 	}
+
 }
 func (c *Client) SendMessage() {
 
