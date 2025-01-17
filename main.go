@@ -3,10 +3,16 @@ package main
 import (
 	"flag"
 	"log"
+
+	"LinkStrashBot/clients/telegram"
+)
+
+const (
+	tgBotHost = "api.telegram.org"
 )
 
 func main() {
-	t := mustToken()
+	tgClient := telegram.New(tgBotHost, mustToken())
 
 }
 
